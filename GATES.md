@@ -26,7 +26,7 @@
 - [x] Hermes installs the distribution into a disposable named profile and recognizes the resulting profile.
   CHECK: `scripts/smoke_install.sh`
   EXPECT: exit 0 and `isolated install smoke: PASS`
-  EVIDENCE: smoke installs 90 skills, validates the installed tree, and removes the profile.
+  EVIDENCE: smoke installs 96 skills, validates the installed tree, and removes the profile.
 
 ## G5. Agent behavior
 

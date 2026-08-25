@@ -34,6 +34,14 @@ Copyright: Leonxlnx
 
 The `design-taste-frontend`, `image-to-code`, and `redesign-existing-projects` skills come from Taste Skill. The license text is in `third_party/LICENSE-TASTE-SKILL`.
 
+## Baoyu infographic
+
+Source: https://github.com/JimLiu/baoyu-skills
+License: MIT
+Copyright: 宝玉 (JimLiu)
+
+The `baoyu-infographic` skill is adapted from that collection.
+
 ## Per-skill attribution
 
 A skill's YAML frontmatter and in-file source notes remain part of that skill. When they name an author or source, those notices govern attribution for that file. No inclusion in this distribution removes an upstream copyright notice.

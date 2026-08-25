@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import sys
 from pathlib import Path
+import re
 
 import yaml
 
@@ -46,6 +47,16 @@ def main() -> int:
     skill_files = sorted(skills_root.rglob("SKILL.md"))
     if not skill_files:
         fail("no materialized skills found")
+    names = {path.parent.name for path in skill_files}
+    for skill_file in skill_files:
+        text = skill_file.read_text(errors="replace")
+        match = re.search(r"related_skills:\s*\[([^\]]*)\]", text)
+        if not match:
+            continue
+        related = [item.strip().strip("'\"") for item in match.group(1).split(",") if item.strip()]
+        missing = [name for name in related if name not in names]
+        if missing:
+            fail(f"{skill_file.parent.name} related_skills missing: {', '.join(missing)}")
     links = [path for path in root.rglob("*") if path.is_symlink()]
     if links:
         fail(f"symlinks are forbidden: {links[0].relative_to(root)}")

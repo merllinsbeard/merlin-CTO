@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import shutil
 from pathlib import Path
+import re
 
 IGNORED_NAMES = (".git", "__pycache__", "*.pyc", ".DS_Store", "*.bak", "*.bak-*")
 TEXT_SUFFIXES = {".md", ".py", ".sh", ".json", ".yaml", ".yml", ".toml", ".txt"}
@@ -99,13 +100,23 @@ SKILLS = [
 
     "page-agent",
     "claude-design",
+    "design-md",
     "design-taste-frontend",
+    "excalidraw",
+    "popular-web-designs",
+    "baoyu-infographic",
     "image",
     "image-to-code",
     "redesign-existing-projects",
     "software-architecture-visualization",
     "visualize",
+    "test-driven-development",
+    "subagent-driven-development",
 ]
+
+RELATED_ALIASES = {
+    "sketch": "prototype",
+}
 
 
 def discover(root: Path) -> dict[str, Path]:
@@ -180,9 +191,38 @@ def main() -> int:
             target.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(source, target)
 
+    available = {path.parent.name for path in destination.rglob("SKILL.md")}
+
+    def rewrite_related(text: str) -> str:
+        match = re.search(r"related_skills:\s*\[([^\]]*)\]", text)
+        if not match:
+            return text
+        names = [item.strip().strip("'\"") for item in match.group(1).split(",") if item.strip()]
+        rewritten = [RELATED_ALIASES.get(name, name) for name in names]
+        replacement = "related_skills: [" + ", ".join(rewritten) + "]"
+        return text[: match.start()] + replacement + text[match.end() :]
+
+    for skill_file in destination.rglob("SKILL.md"):
+        text = skill_file.read_text()
+        updated = rewrite_related(text)
+        if updated != text:
+            skill_file.write_text(updated)
+
     links = [path for path in destination.rglob("*") if path.is_symlink()]
     if links:
         raise SystemExit(f"materialization left {len(links)} symlink(s)")
+
+    missing_related = []
+    for skill_file in destination.rglob("SKILL.md"):
+        match = re.search(r"related_skills:\s*\[([^\]]*)\]", skill_file.read_text())
+        if not match:
+            continue
+        names = [item.strip().strip("'\"") for item in match.group(1).split(",") if item.strip()]
+        absent = [name for name in names if name not in available]
+        if absent:
+            missing_related.append(f"{skill_file.parent.name}: {', '.join(absent)}")
+    if missing_related:
+        raise SystemExit("unresolved related_skills:\n  " + "\n  ".join(missing_related))
 
     print(f"materialized {len(SKILLS)} skills")
     return 0

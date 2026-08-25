@@ -9,7 +9,16 @@ The profile ships without its author's memory, sessions, credentials, project re
 - Hermes Agent 0.20.5 or newer
 - an authenticated `openai-codex` provider with access to `gpt-5.6-sol`
 - Git for repository work
-- optional coding CLIs used by individual skills
+
+The core loop works with only those three. Extra tools unlock extra skills and are not required for install:
+
+- `gh` for GitHub issues, pull requests, and reviews
+- Docker for container work
+- Codex, Claude Code, or OpenCode CLIs for coding writers
+- `ast-grep` for structural search
+- an image provider for visualization skills
+
+If a tool is missing, the agent should say so instead of pretending the skill ran.
 
 ## Install from GitHub
 
