@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 56" width="100%" role="img">
-  <title>Merlin CTO 1.0.3</title>
-  <desc>107 skills. Hermes 0.20.5 or newer. MIT.</desc>
+  <title>Merlin CTO 1.0.4</title>
+  <desc>117 skills. Hermes 0.20.5 or newer. MIT.</desc>
   <rect width="1200" height="56" fill="#0A0A0A"/>
-  <text x="40" y="36" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16" fill="#F4F1EA" letter-spacing="3">1.0.3</text>
-  <text x="160" y="36" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16" fill="#9A9A9A">107 SKILLS</text>
+  <text x="40" y="36" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16" fill="#F4F1EA" letter-spacing="3">1.0.4</text>
+  <text x="160" y="36" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16" fill="#9A9A9A">117 SKILLS</text>
   <text x="340" y="36" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16" fill="#9A9A9A">HERMES &gt;=0.20.5</text>
   <text x="620" y="36" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16" fill="#9A9A9A">MIT</text>
   <text x="740" y="36" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16" fill="#9A9A9A">INSTALL FOLLOWS MAIN</text>

@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.4 - 2026-08-25
+
+Runtime craft: Postgres, pytest, observability, defensive review, and frontend rules.
+
+- Ten skills: `observability-and-instrumentation`, `database-schema-designer`, `supabase-postgres-best-practices`, `python-best-practices`, `python-testing-patterns`, `security-review`, `vercel-react-best-practices`, `react-best-practices`, `vue-best-practices`, `tailwind-v4`
+- `SOUL.md` and `/ask-merlin` name them
+- Installed pack is now 117 materialized skills
+
 ## 1.0.3 - 2026-08-25
 
 Ask-merlin router and the live-needed skill pack land on the night README.

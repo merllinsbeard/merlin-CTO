@@ -42,6 +42,77 @@ Copyright: 宝玉 (JimLiu)
 
 The `baoyu-infographic` skill is adapted from that collection.
 
+## Observability and instrumentation
+
+Source: https://github.com/addyosmani/agent-skills
+License: MIT
+Copyright: Addy Osmani
+
+The license text is in `third_party/LICENSE-ADDYOSMANI-AGENT-SKILLS`.
+
+## Database schema designer
+
+Source: https://github.com/softaworks/agent-toolkit
+License: MIT
+Copyright: Leonardo Flores
+
+The license text is in `third_party/LICENSE-SOFTAWORKS-AGENT-TOOLKIT`.
+
+## Python best practices
+
+Source: https://github.com/alleneubank/claude-code
+License: Apache-2.0
+Copyright: Allen Neubank
+
+The license text is in `third_party/LICENSE-ALLENEUBANK-CLAUDE-CODE`.
+
+## Python testing patterns
+
+Source: https://github.com/wshobson/agents
+License: MIT
+
+The license text is in `third_party/LICENSE-WSHOBSON-AGENTS`.
+
+## Supabase Postgres best practices
+
+Source: https://github.com/supabase/agent-skills
+License: MIT
+Copyright: Supabase
+
+The license text is in `third_party/LICENSE-SUPABASE-AGENT-SKILLS`.
+
+## Security review
+
+Source: https://github.com/getsentry/skills
+License: Apache-2.0
+Copyright: Functional Software, Inc. / Sentry
+
+The license text is in `third_party/LICENSE-GETSENTRY-SKILLS`.
+
+## Vercel React best practices
+
+Source: https://github.com/vercel-labs/agent-skills
+License: MIT
+Copyright: Vercel
+
+Frontmatter on the skill names MIT. No root LICENSE file was present in the upstream tree at pack time.
+
+## Vue best practices
+
+Source: https://github.com/vuejs-ai/skills
+License: MIT
+Copyright: hyf0, SerKo
+
+The license text is in `third_party/LICENSE-VUEJS-AI-SKILLS`.
+
+## Mastra React and Tailwind v4
+
+Source: https://github.com/mastra-ai/mastra
+License: Apache-2.0
+Copyright: Kepler Software, Inc.
+
+The `react-best-practices` and `tailwind-v4` skills come from that repository. The license text is in `third_party/LICENSE-MASTRA.md`.
+
 ## Per-skill attribution
 
 A skill's YAML frontmatter and in-file source notes remain part of that skill. When they name an author or source, those notices govern attribution for that file. No inclusion in this distribution removes an upstream copyright notice.

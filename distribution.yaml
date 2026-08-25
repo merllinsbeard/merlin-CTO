@@ -1,5 +1,5 @@
 name: merlin-cto
-version: 1.0.3
+version: 1.0.4
 description: Opinionated Hermes engineering profile that routes work, enforces one writer per worktree, and finishes with verification evidence.
 hermes_requires: ">=0.20.5"
 author: Merlin
