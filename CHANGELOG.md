@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.0.2 - 2026-08-25
+
+Public plates and a short reel.
+
+- `docs/media/overview.png`, `what.png`, `how.png`, `different.png`, `night.png`
+- `docs/media/reel.mp4`: same plates, stations fill, sun breathes
+- README uses the plates instead of Mermaid
+
+The installed profile payload is unchanged: still 96 skills, local memory, no credentials.
+
 ## 1.0.1 - 2026-08-25
 
 Patch on the first public drop.

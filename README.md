@@ -4,7 +4,11 @@ Merlin CTO is an opinionated Hermes engineering profile that routes architecture
 
 Stock Hermes plus a skill folder still improvises the whole job in one chat and treats a patch as done. This profile decides how the work runs, who may write, and what counts as finished.
 
-Current distribution: **1.0.1**, 96 materialized skills, Hermes **0.20.5** or newer. Install follows the repository default branch. Compare a checkout to the [latest GitHub Release](https://github.com/merllinsbeard/merlin-CTO/releases/latest) before you trust it.
+![Merlin CTO](docs/media/overview.png)
+
+Current distribution: **1.0.2**, 96 materialized skills, Hermes **0.20.5** or newer. Install follows the repository default branch. Compare a checkout to the [latest GitHub Release](https://github.com/merllinsbeard/merlin-CTO/releases/latest) before you trust it.
+
+[24-second reel](docs/media/reel.mp4): same plates, stations fill, the sun breathes.
 
 ## What you use it for
 
@@ -28,6 +32,8 @@ Review the live diff, the tests, and the neighboring paths, not a summary. `blas
 
 Ship only what you can point at. `github-pr-workflow`, `github-repo-management`, and `production-release-verification` keep commit, push, merge, and production checks on evidence. Shared or client repos stay read-plus-local-diff until the owner says otherwise.
 
+![Five jobs](docs/media/what.png)
+
 ## One route, request to evidence
 
 A real run from this repository, 2026-08-25.
@@ -46,29 +52,7 @@ That is the bar. A route that ends in "should work" is unfinished.
 
 ## How a request moves
 
-```mermaid
-flowchart LR
-  A[Ask CTO] --> B[Orchestration]
-  B --> C[Executor]
-  C --> D[Review]
-  D --> E[Verification]
-```
-
-```mermaid
-flowchart TD
-  A[Ask CTO] --> B{Choose a mode}
-  B -->|small bounded change| C[Direct edit]
-  B -->|research or review fan-out| D[Subagents]
-  B -->|survives restart or many tickets| E[Kanban]
-  B -->|implementation by a coding CLI| F[CLI writer]
-  C --> G[One writer per worktree]
-  D --> G
-  E --> G
-  F --> G
-  G --> H[Review the live diff]
-  H --> I[Verification evidence]
-  I --> J[Tests, live output, or service state]
-```
+![Request to evidence](docs/media/how.png)
 
 Orchestration is the profile, not a second product. The executor may be the CTO process itself or a writer CLI. Review reads the diff the writer left. Verification is a command, a URL, a test run, or a service state. Intention is not evidence.
 
@@ -82,6 +66,10 @@ Orchestration is the profile, not a second product. The executor may be the CTO 
 | Git mutations follow whoever is logged in | Owned repos may go through the full cycle. Shared, client, and unclear repos stay local until you allow a push |
 | Skills are a menu the model may ignore | Agent-facing text goes through `writing-for-agents`. Human answers go through `unslop` |
 | Sharing a profile often means copying a home directory | This repo is a portable distribution: no memory, no sessions, no credentials, fail-closed verifiers |
+
+![Stock Hermes versus Merlin CTO](docs/media/different.png)
+
+![Night plate](docs/media/night.png)
 
 ## Install
 
@@ -159,13 +147,14 @@ User-owned memory, sessions, credentials, logs, and local workspace data stay un
 
 | Version | Date | What landed |
 | --- | --- | --- |
+| [1.0.2](https://github.com/merllinsbeard/merlin-CTO/releases/tag/v1.0.2) | 2026-08-25 | Positioning plates and a 24s reel in `docs/media/` |
 | [1.0.1](https://github.com/merllinsbeard/merlin-CTO/releases/tag/v1.0.1) | 2026-08-25 | CI receipt step no longer drops the gitleaks binary into the checkout |
 | [1.0.0](https://github.com/merllinsbeard/merlin-CTO/releases/tag/v1.0.0) | 2026-08-25 | First public distribution. 96 skills. Fail-closed verifiers. Isolated install smoke. Positioning README, changelog, and release receipts |
 
 Full notes live in [CHANGELOG.md](CHANGELOG.md). Each GitHub Release attaches a receipt with commit SHA, tree SHA, skill count, and verifier results.
 
 ```bash
-python scripts/write_release_receipt.py --check /path/to/merlin-cto-1.0.1.receipt.json
+python scripts/write_release_receipt.py --check /path/to/merlin-cto-1.0.2.receipt.json
 ```
 
 The first four commits on `main` are not GPG or SSH signed. No signing key is configured for this publisher on the build host. Do not rewrite that history. Trust the receipt, the CI run on that SHA, and the GitHub Release asset.
@@ -193,6 +182,7 @@ Third-party text keeps its own license. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY
 - `scripts/`: publication, installation, and receipt checks
 - `tools/`: maintainer tooling
 - `.github/workflows/`: verifiers and gitleaks on every push
+- `docs/media/`: public plates and the short reel
 
 ## Verification
 

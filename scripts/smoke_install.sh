@@ -23,7 +23,7 @@ root = Path(get_profile_dir(sys.argv[1]))
 assert (root / "SOUL.md").is_file()
 assert (root / "config.yaml").is_file()
 manifest = yaml.safe_load((root / "distribution.yaml").read_text())
-assert manifest["version"] == "1.0.1"
+assert manifest["version"] == "1.0.2"
 assert manifest["name"].startswith("merlin-cto-smoke-")
 assert sum(1 for _ in (root / "skills").rglob("SKILL.md")) == 96
 assert not any(path.is_symlink() for path in root.rglob("*"))
@@ -31,6 +31,7 @@ for maintainer_only in (
     "CHANGELOG.md",
     "GATES.md",
     "README.md",
+    "docs",
     ".github",
     "scripts",
     "tools",
