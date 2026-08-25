@@ -1,0 +1,21 @@
+model:
+  provider: openai-codex
+  default: gpt-5.6-sol
+
+delegation:
+  provider: openai-codex
+  model: gpt-5.6-sol
+  max_iterations: 60
+  child_timeout_seconds: 0
+
+terminal:
+  cwd: "."
+
+memory:
+  provider: local
+  memory_char_limit: 3500
+  user_char_limit: 2000
+
+approvals:
+  mode: manual
+  destructive_slash_confirm: true

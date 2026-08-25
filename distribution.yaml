@@ -1,0 +1,12 @@
+name: merlin-cto
+version: 1.0.0
+description: Autonomous CTO profile for software architecture, implementation, review, and infrastructure.
+hermes_requires: ">=0.20.5"
+author: Merlin
+license: MIT
+env_requires: []
+distribution_owned:
+  - distribution.yaml
+  - SOUL.md
+  - config.yaml
+  - skills

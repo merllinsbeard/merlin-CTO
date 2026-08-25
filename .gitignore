@@ -1,0 +1,22 @@
+# Local and generated state
+.env
+.env.*
+!.env.example
+__pycache__/
+*.pyc
+*.db
+*.db-shm
+*.db-wal
+*.sock
+.cache/
+cache/
+home/
+logs/
+sessions/
+memories/
+workspace/
+backups/
+output/
+.smoke-home/
+.smoke-profile/
+.DS_Store

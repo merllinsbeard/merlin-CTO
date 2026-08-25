@@ -1,0 +1,6 @@
+interface:
+  display_name: "Wait What Bro"
+  short_description: "Переформулирует прошлый ответ простым языком"
+  default_prompt: "Переформулируй свой предыдущий ответ простым человеческим языком и на языке пользователя."
+policy:
+  allow_implicit_invocation: false
