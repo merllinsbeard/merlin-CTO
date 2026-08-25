@@ -1,124 +1,118 @@
 # Merlin CTO
 
-Merlin CTO is an opinionated Hermes engineering profile that routes architecture, implementation, review, release, and infrastructure work to the right execution mode, enforces one writer per worktree, and finishes with direct verification evidence.
+<p align="center">
+  <img src="docs/media/night.png" width="100%" alt="Merlin CTO night plate. Giant cropped MERLIN word, dithered white sun, four modes: Direct, Subagent, Kanban, CLI writer.">
+</p>
+
+<p align="center">
+  <img src="docs/media/meta.svg" width="100%" alt="1.0.2. 96 skills. Hermes 0.20.5 or newer. MIT. Install follows main.">
+</p>
+
+An opinionated Hermes engineering profile. It routes architecture, implementation, review, release, and infrastructure work to the right execution mode, keeps one writer per worktree, and finishes with verification evidence.
 
 Stock Hermes plus a skill folder still improvises the whole job in one chat and treats a patch as done. This profile decides how the work runs, who may write, and what counts as finished.
 
-![Merlin CTO](docs/media/overview.png)
+<p align="center">
+  <img src="docs/media/overview.png" width="100%" alt="Merlin CTO overview. Giant cropped CTO mark, dithered sun, five stations from Ask to Verification.">
+</p>
 
-Current distribution: **1.0.2**, 96 materialized skills, Hermes **0.20.5** or newer. Install follows the repository default branch. Compare a checkout to the [latest GitHub Release](https://github.com/merllinsbeard/merlin-CTO/releases/latest) before you trust it.
+[24-second reel](docs/media/reel.mp4). Same plates. Stations fill. The sun breathes.
 
-[24-second reel](docs/media/reel.mp4): same plates, stations fill, the sun breathes.
+Install from the [latest GitHub Release](https://github.com/merllinsbeard/merlin-CTO/releases/latest). `hermes profile install` follows `main`. Compare a checkout to that receipt.
 
-## What you use it for
-
-### Understand
-
-Map a codebase before you change it. `how` and `why` walk the live code, commits, and docs. `code-wiki`, `blast-radius`, and `codebase-capability-map` say what exists, what a change can break, and what the platform can actually do.
-
-### Design
-
-Lock the domain and the spec before writers start. `domain-modeling` and `codebase-design` make illegal states hard to express. `to-spec` and `to-tickets` turn that into a spec with acceptance checks and a ticket graph with `blocked_by`.
-
-### Implement
-
-Pick a mode with `cli-agent-first`: direct edit, subagent fan-out, Kanban, or a coding CLI. Hermes keeps the goal, the spec, and acceptance. One writer per worktree. `ponytail` picks the smallest change that works. `unlazy` and `principle-prove-it-works` refuse a stop at "I wrote the patch."
-
-### Review
-
-Review the live diff, the tests, and the neighboring paths, not a summary. `blast-radius` names the contracts. `github-code-review` and `requesting-code-review` run the review on the actual change. Depth follows risk, not a ritual number of passes.
-
-### Release
-
-Ship only what you can point at. `github-pr-workflow`, `github-repo-management`, and `production-release-verification` keep commit, push, merge, and production checks on evidence. Shared or client repos stay read-plus-local-diff until the owner says otherwise.
-
-![Five jobs](docs/media/what.png)
-
-## One route, request to evidence
-
-A real run from this repository, 2026-08-25.
-
-**Ask.** After the first public publish: will every skill work for the person who installs this?
-
-**Orchestration.** Stay on the distribution. Do not touch the installer person's machine. Inventory every `related_skills` name against the materialized tree.
-
-**Executor.** Add the six missing skills, retarget `sketch` to `prototype`, and make `scripts/verify_distribution.py` fail if a related skill is absent.
-
-**Review.** Re-run the committed-tree verifiers on the pack itself.
-
-**Verification.** `scripts/smoke_install.sh` installed 96 skills into a disposable profile and deleted it. Public commit: [`d6b0bbb5e27760612d409e5636212a475e767874`](https://github.com/merllinsbeard/merlin-CTO/commit/d6b0bbb5e27760612d409e5636212a475e767874).
-
-That is the bar. A route that ends in "should work" is unfinished.
-
-## How a request moves
-
-![Request to evidence](docs/media/how.png)
-
-Orchestration is the profile, not a second product. The executor may be the CTO process itself or a writer CLI. Review reads the diff the writer left. Verification is a command, a URL, a test run, or a service state. Intention is not evidence.
-
-## What makes it different
-
-| Stock Hermes with extra skills | Merlin CTO |
-| --- | --- |
-| The chat does architecture, coding, and release in one pile | The profile picks direct, subagent, Kanban, or a coding CLI |
-| Several writers can share one checkout | One writer per worktree. Parallel research is fine. Parallel writes are not |
-| "Done" means the model wrote a patch | "Done" means tests, live output, a diff, a file, a URL, or service state |
-| Git mutations follow whoever is logged in | Owned repos may go through the full cycle. Shared, client, and unclear repos stay local until you allow a push |
-| Skills are a menu the model may ignore | Agent-facing text goes through `writing-for-agents`. Human answers go through `unslop` |
-| Sharing a profile often means copying a home directory | This repo is a portable distribution: no memory, no sessions, no credentials, fail-closed verifiers |
-
-![Stock Hermes versus Merlin CTO](docs/media/different.png)
-
-![Night plate](docs/media/night.png)
-
-## Install
+<p align="center">
+  <img src="docs/media/section-install.svg" width="100%" alt="Install. hermes profile install follows main.">
+</p>
 
 ```bash
 hermes profile install github.com/merllinsbeard/merlin-CTO --name merlin-cto --alias
 ```
 
-Inspect the installed profile:
-
 ```bash
 hermes profile show merlin-cto
-hermes profile info merlin-cto
 merlin-cto doctor
-```
-
-Start it inside a project:
-
-```bash
 cd /path/to/repository
 merlin-cto chat
 ```
 
-If `gpt-5.6-sol` is unavailable on your Codex account, pick a model you can use:
+If `gpt-5.6-sol` is unavailable on your Codex account:
 
 ```bash
 hermes -p merlin-cto model
 ```
 
-Provider credentials stay on the installing machine. They are never in this repository.
+Credentials stay on the installing machine. They are never in this repository.
 
-`hermes profile install` clones the default branch with `git clone --depth 1`. The module docstring mentions `#tag` pinning. The clone path does not honor it yet. Treat GitHub Releases and the receipt as the version. `hermes profile update merlin-cto` pulls that same default branch again.
+<p align="center">
+  <img src="docs/media/section-what.svg" width="100%" alt="What. Understand, design, implement, review, release.">
+</p>
 
-## Compatibility and tools
+<p align="center">
+  <img src="docs/media/what.png" width="100%" alt="Five jobs: Understand, Design, Implement, Review, Release, with the skills that run each.">
+</p>
 
-Required for the core loop:
+**Understand.** Map the live system before you change it. `how`, `why`, `code-wiki`, `blast-radius`.
 
-- Hermes Agent 0.20.5 or newer
-- an authenticated `openai-codex` provider, or another provider you configure after install
-- default model `gpt-5.6-sol`, or a substitute you select with `hermes -p merlin-cto model`
-- Git
+**Design.** Lock the rule before the patch. `to-spec`, `domain-modeling`, `codebase-design`.
 
-Optional. Missing tools do not block install. The matching skill should say the tool is absent instead of faking a result:
+**Implement.** `cli-agent-first` picks direct, subagent, Kanban, or a coding CLI. One writer per worktree.
+
+**Review.** Judge the live diff, not the story. `blast-radius`, `github-code-review`.
+
+**Release.** Done means tests, live output, or service state. Shared repos stay local until the owner allows a push.
+
+<p align="center">
+  <img src="docs/media/section-how.svg" width="100%" alt="How. Ask, orchestration, executor, review, verification.">
+</p>
+
+<p align="center">
+  <img src="docs/media/how.png" width="100%" alt="Request-to-evidence sheet. Five stations from Ask CTO to Verification. Verification is the filled black box.">
+</p>
+
+A real run from this repository, 2026-08-25.
+
+**Ask.** After the first public publish: will every skill work for the person who installs this?
+
+**Orchestration.** Stay on the distribution. Inventory every `related_skills` name against the materialized tree.
+
+**Executor.** Add the six missing skills, retarget `sketch` to `prototype`, fail closed if a related skill is absent.
+
+**Review.** Re-run the committed-tree verifiers on the pack itself.
+
+**Verification.** `scripts/smoke_install.sh` installed 96 skills into a disposable profile and deleted it. Public commit: [`d6b0bbb`](https://github.com/merllinsbeard/merlin-CTO/commit/d6b0bbb5e27760612d409e5636212a475e767874).
+
+A route that ends in "should work" is unfinished.
+
+<p align="center">
+  <img src="docs/media/section-different.svg" width="100%" alt="Different. One writer, evidence, not a skill dump.">
+</p>
+
+<p align="center">
+  <img src="docs/media/different.png" width="100%" alt="Stock Hermes plus skills versus Merlin CTO. Routes the work. One writer. Done means evidence. Receipt plus CI name the SHA.">
+</p>
+
+| Stock Hermes with extra skills | Merlin CTO |
+| --- | --- |
+| One chat does every job | Direct, subagent, Kanban, or a CLI writer |
+| Any number of writers | One writer per worktree |
+| A patch counts as done | Done means evidence |
+| A folder of skills | A verified portable distribution |
+
+`hermes profile install` clones the default branch with `git clone --depth 1`. Tag pinning is not honored yet. Treat the GitHub Release receipt as the version.
+
+<details>
+<summary>Compatibility, memory, and updates</summary>
+
+Required: Hermes Agent 0.20.5 or newer, Git, and an authenticated `openai-codex` provider or another provider you set after install. Default model is `gpt-5.6-sol`.
+
+Optional. Missing tools do not block install. The matching skill should say the tool is absent.
 
 | Tool | Unlocks |
 | --- | --- |
-| `gh` | GitHub issues, pull requests, reviews |
+| `gh` | Issues, pull requests, reviews |
 | Docker | Container work |
 | Codex, Claude Code, or OpenCode CLIs | Writer skills already in the pack |
-| Cursor Agent or Grok CLIs | Writers named in `SOUL.md`. No adapter skill ships in this pack |
+| Cursor Agent or Grok CLIs | Writers named in `SOUL.md`. No adapter skill ships here |
 | `ast-grep` | Structural search |
 | An image provider | Visualization skills |
 
@@ -129,37 +123,32 @@ hermes -p merlin-cto gateway setup
 hermes -p merlin-cto gateway install
 ```
 
-## Memory boundary
-
-The distribution uses Hermes local memory. It does not include OpenViking, `USER.md`, `MEMORY.md`, sessions, databases, Telegram history, or project data.
-
-Each install starts with an empty user and an empty memory. Do not reuse another person's memory namespace or credentials.
-
-## Updating
+Memory is local Hermes memory. No OpenViking, `USER.md`, `MEMORY.md`, sessions, or project data ship in the pack. Each install starts empty.
 
 ```bash
 hermes profile update merlin-cto
 ```
 
-User-owned memory, sessions, credentials, logs, and local workspace data stay untouched.
+User-owned memory, sessions, credentials, and workspace data stay untouched.
 
-## Release history and skill provenance
+</details>
+
+<details>
+<summary>Release history and skill provenance</summary>
 
 | Version | Date | What landed |
 | --- | --- | --- |
-| [1.0.2](https://github.com/merllinsbeard/merlin-CTO/releases/tag/v1.0.2) | 2026-08-25 | Positioning plates and a 24s reel in `docs/media/` |
-| [1.0.1](https://github.com/merllinsbeard/merlin-CTO/releases/tag/v1.0.1) | 2026-08-25 | CI receipt step no longer drops the gitleaks binary into the checkout |
-| [1.0.0](https://github.com/merllinsbeard/merlin-CTO/releases/tag/v1.0.0) | 2026-08-25 | First public distribution. 96 skills. Fail-closed verifiers. Isolated install smoke. Positioning README, changelog, and release receipts |
+| [1.0.2](https://github.com/merllinsbeard/merlin-CTO/releases/tag/v1.0.2) | 2026-08-25 | Positioning plates and a 24s reel |
+| [1.0.1](https://github.com/merllinsbeard/merlin-CTO/releases/tag/v1.0.1) | 2026-08-25 | CI receipt no longer drops gitleaks into the checkout |
+| [1.0.0](https://github.com/merllinsbeard/merlin-CTO/releases/tag/v1.0.0) | 2026-08-25 | First public distribution |
 
-Full notes live in [CHANGELOG.md](CHANGELOG.md). Each GitHub Release attaches a receipt with commit SHA, tree SHA, skill count, and verifier results.
+Full notes: [CHANGELOG.md](CHANGELOG.md).
 
 ```bash
 python scripts/write_release_receipt.py --check /path/to/merlin-cto-1.0.2.receipt.json
 ```
 
-The first four commits on `main` are not GPG or SSH signed. No signing key is configured for this publisher on the build host. Do not rewrite that history. Trust the receipt, the CI run on that SHA, and the GitHub Release asset.
-
-### Skill provenance
+Published commits are not GPG or SSH signed. No signing key is configured on the build host. Trust the receipt, the CI run on that SHA, and the GitHub Release asset.
 
 96 `SKILL.md` files, materialized with no symlinks.
 
@@ -173,18 +162,18 @@ The first four commits on `main` are not GPG or SSH signed. No signing key is co
 
 Third-party text keeps its own license. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
-## Repository contents
+</details>
+
+<details>
+<summary>Repository contents and verification</summary>
 
 - `SOUL.md`: CTO behavior and operating rules
 - `config.yaml`: portable default model, delegation, memory, and approval settings
 - `skills/`: materialized engineering skills, no filesystem symlinks
 - `distribution.yaml`: Hermes distribution manifest
 - `scripts/`: publication, installation, and receipt checks
-- `tools/`: maintainer tooling
+- `docs/media/`: public plates, section marks, and the short reel
 - `.github/workflows/`: verifiers and gitleaks on every push
-- `docs/media/`: public plates and the short reel
-
-## Verification
 
 ```bash
 python scripts/verify_distribution.py .
@@ -195,6 +184,8 @@ python scripts/write_release_receipt.py
 ```
 
 A passing install proves packaging and loading. It does not prove your model authorization, Telegram, or a production deploy.
+
+</details>
 
 ## License
 

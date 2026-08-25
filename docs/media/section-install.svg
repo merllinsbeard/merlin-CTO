@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 80" width="100%" role="img">
+  <title>Install</title>
+  <desc>Install from GitHub. Hermes clones the default branch.</desc>
+  <rect width="1200" height="80" fill="#0A0A0A"/>
+  <text x="40" y="50" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="26" fill="#F4F1EA" letter-spacing="6">INSTALL</text>
+  <text x="280" y="50" font-family="ui-sans-serif, system-ui, sans-serif" font-size="18" fill="#9A9A9A">hermes profile install · follows main</text>
+</svg>
