@@ -2,8 +2,8 @@
 
 ## Unreleased
 
-- Add `/ask-cto` as the public router: orchestration lane, execution owner, supporting skills, verification contract
-- Route extra installed skills through `references/installed-extras.md` without shipping them in the portable set
+- Add `/ask-cto` as a SOUL explainer: which mode and which listed skills fit the request
+- Expand `SOUL.md` with when-to-pick notes for modes and skill groups
 
 ## 1.0.1 - 2026-08-25
 

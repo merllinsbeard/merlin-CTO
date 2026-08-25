@@ -46,8 +46,6 @@ That is the bar. A route that ends in "should work" is unfinished.
 
 ## How a request moves
 
-Type `/ask-cto`. The skill names the lane, the owner, the supporting skills, and the proof. Then the named route runs.
-
 ```mermaid
 flowchart LR
   A[Ask CTO] --> B[Orchestration]
