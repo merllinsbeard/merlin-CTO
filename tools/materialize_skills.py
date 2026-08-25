@@ -123,6 +123,16 @@ SKILLS = [
     "visualize",
     "test-driven-development",
     "subagent-driven-development",
+    "observability-and-instrumentation",
+    "database-schema-designer",
+    "python-best-practices",
+    "python-testing-patterns",
+    "security-review",
+    "supabase-postgres-best-practices",
+    "vercel-react-best-practices",
+    "react-best-practices",
+    "vue-best-practices",
+    "tailwind-v4",
 ]
 
 RELATED_ALIASES = {

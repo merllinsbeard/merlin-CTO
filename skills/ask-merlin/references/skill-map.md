@@ -87,12 +87,15 @@ Load only after `cli-agent-first` named this sibling. Check the binary and login
 - `python-debugpy`. pdb или remote DAP для Python.
 - `ast-grep`. Поиск и перепись по форме AST, не по тексту.
 - `typescript-best-practices`. TypeScript-синтаксис поверх `principle-type-system-discipline`.
+- `python-best-practices`. Python-синтаксис поверх тех же принципов. `uv` / `uv run`.
+- `python-testing-patterns`. pytest, фикстуры, моки. Не подменяет `tdd`.
 - `simplify-code`. Четыре параллельных ревьюера недавнего diff.
 
 ## Review and release
 
 - `code-review`. Две оси: стандарты репо и спека, от `HEAD` до зафиксированной точки.
 - `requesting-code-review`. Локальный проход до коммита: сканы, гейты, автофикс.
+- `security-review`. Защитный разбор своего diff: инъекции, доступ, секреты, промпт. Без эксплойта.
 - `github-code-review`. PR на GitHub, inline через `gh` или REST.
 - `sdlc-review`. Ревью handoff в полосе Kanban. Не подменяет исполнителя.
 - `kanban-board-operations`. Почистить или сверить переполненную Kanban-доску. Это состояние доски, не код-ревью.
@@ -122,6 +125,10 @@ Load only after `cli-agent-first` named this sibling. Check the binary and login
 - `claude-design`. Разовый HTML: лендинг, колода, прототип.
 - `design-md`. Файл токенов DESIGN.md.
 - `page-agent`. Встроенный в страницу GUI-копилот.
+- `vercel-react-best-practices`. React и Next: водопады, бандл, ререндер. Канон для обычного React.
+- `react-best-practices`. Подмножество Mastra. Только если назвали Mastra.
+- `vue-best-practices`. Только если в репо есть Vue.
+- `tailwind-v4`. Классы Tailwind v4 или миграция с v3.
 
 ## Pictures
 
@@ -134,6 +141,9 @@ Load only after `cli-agent-first` named this sibling. Check the binary and login
 ## Infra and Hermes
 
 - `docker-management`. Контейнеры, образы, тома, Compose.
+- `observability-and-instrumentation`. Логи, метрики, трейсы до выкладки. Не живой инцидент.
+- `database-schema-designer`. Черновик схемы. По умолчанию Postgres.
+- `supabase-postgres-best-practices`. Запросы, индексы, локи, типы Postgres. RLS только если он уже есть.
 - `remote-machine-access`. Нативная работа с Mac и удалёнными хостами.
 - `hermes-agent`. Настройка и диагностика Hermes. Официальная документация остаётся главным источником.
 - `hermes-desktop-debugging`. Desktop ведёт UI-действие не туда. Трассируй как переход состояния, не как один обработчик кнопки.

@@ -5,7 +5,7 @@
 - [x] The repository contains a valid Hermes `distribution.yaml`, portable `config.yaml`, public `SOUL.md`, materialized skills, and installation documentation.
   CHECK: `python scripts/verify_distribution.py .`
   EXPECT: exit 0 and `distribution verification: PASS`
-  EVIDENCE: verifier passes with 107 materialized skills.
+  EVIDENCE: verifier passes with 117 materialized skills.
 
 ## G2. Public-data boundary
 
@@ -26,7 +26,7 @@
 - [x] Hermes installs the distribution into a disposable named profile and recognizes the resulting profile.
   CHECK: `scripts/smoke_install.sh`
   EXPECT: exit 0 and `isolated install smoke: PASS`
-  EVIDENCE: smoke installs 107 skills, rejects maintainer-only paths, and removes the profile.
+  EVIDENCE: smoke installs 117 skills, rejects maintainer-only paths, and removes the profile.
 
 ## G5. Agent behavior
 

@@ -79,6 +79,11 @@
 - `blast-radius` — найти затрагиваемые контракты, данные, вызовы и соседние пути.
 - `principle-fix-root-causes` — исправлять причину, а не симптом.
 - `tdd` — использовать по явному запросу или когда красный тест лучше всего фиксирует границу дефекта.
+- `python-best-practices` — Python-синтаксис поверх `principle-type-system-discipline`.
+- `python-testing-patterns` — pytest и фикстуры. Не подменяет `tdd`.
+- `security-review` — защитный разбор своего diff. Без эксплойта.
+
+`python-best-practices` закрывает Python. `vercel-react-best-practices` закрывает обычный React и Next. `vue-best-practices` только если в репо есть Vue. `tailwind-v4` — Tailwind v4.
 
 ### Знания и инструкции
 
@@ -86,6 +91,9 @@
 - `principle-encode-lessons-in-structure` — закреплять повторяющиеся уроки в коде, типах, тестах или skills, а не в напоминаниях.
 - `hermes-agent` — настройка и диагностика Hermes. Официальная документация остаётся главным источником.
 - `remote-machine-access` — нативная работа с Mac и удалёнными хостами.
+- `observability-and-instrumentation` — логи, метрики, трейсы до выкладки. Не живой инцидент.
+- `database-schema-designer` — черновик схемы. По умолчанию Postgres.
+- `supabase-postgres-best-practices` — запросы, индексы и локи Postgres. RLS только если он уже есть.
 
 ## Границы и завершение
 
