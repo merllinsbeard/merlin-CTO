@@ -12,7 +12,7 @@ IGNORED_NAMES = (".git", "__pycache__", "*.pyc", ".DS_Store", "*.bak", "*.bak-*"
 TEXT_SUFFIXES = {".md", ".py", ".sh", ".json", ".yaml", ".yml", ".toml", ".txt"}
 
 SKILLS = [
-    "ask-cto",
+    "ask-merlin",
     "blast-radius",
     "concise",
     "how",

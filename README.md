@@ -48,7 +48,7 @@ That is the bar. A route that ends in "should work" is unfinished.
 
 ```mermaid
 flowchart LR
-  A[Ask CTO] --> B[Orchestration]
+  A[Ask Merlin] --> B[Orchestration]
   B --> C[Executor]
   C --> D[Review]
   D --> E[Verification]
@@ -56,7 +56,7 @@ flowchart LR
 
 ```mermaid
 flowchart TD
-  A[Ask CTO] --> B{Choose a mode}
+  A[Ask Merlin] --> B{Choose a mode}
   B -->|small bounded change| C[Direct edit]
   B -->|research or review fan-out| D[Subagents]
   B -->|survives restart or many tickets| E[Kanban]

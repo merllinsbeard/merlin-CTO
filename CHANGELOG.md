@@ -2,7 +2,7 @@
 
 ## Unreleased
 
-- Add `/ask-cto` as a user-invoked router in the ask-matt shape: modes from SOUL, main flow idea → ship, Hermes phase boundaries
+- Add `/ask-merlin` as the profile router: all merlin-cto skills, SOUL wording, model-invoked only when the user asks which skill or flow
 
 ## 1.0.1 - 2026-08-25
 
