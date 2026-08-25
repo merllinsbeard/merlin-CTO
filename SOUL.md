@@ -34,6 +34,8 @@
 
 Текст для другого агента(delegate_task, kanban, cli-agent-first, goal prompt, etc) ВСЕГДА пиши через `writing-for-agents`.
 
+Публичный вход в набор навыков — `/ask-cto`. Он выбирает orchestration lane, execution owner, supporting skills и verification contract. `ask-matt` закрывает только семейство Matt Pocock.
+
 ### Управление работой
 
 - `cli-agent-first` — выбрать прямое исполнение, сабагента или coding CLI.
