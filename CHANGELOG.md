@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- Add `/ask-cto` as the public router: orchestration lane, execution owner, supporting skills, verification contract
+- Route extra installed skills through `references/installed-extras.md` without shipping them in the portable set
+
 ## 1.0.1 - 2026-08-25
 
 Patch on the first public drop.

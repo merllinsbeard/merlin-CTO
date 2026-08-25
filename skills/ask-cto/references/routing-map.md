@@ -2,6 +2,8 @@
 
 Map a request to installed frontmatter names. If two skills appear in one row, the first column decides. Do not load the whole row.
 
+After this file, apply [installed-extras.md](installed-extras.md) for any extra that is actually installed.
+
 ## Understand
 
 | Signal | Load | Do not load for this signal |
@@ -21,11 +23,12 @@ Map a request to installed frontmatter names. If two skills appear in one row, t
 | Small reversible edit, files in reach | Direct | this session |
 | Parallel read-only research or isolated file sets | Subagents | `cto-subagent-development` |
 | Must survive restart, cross profiles, blockers, ticket graph | Kanban | `ticket-campaign-execution` |
+| Recurring watch, digest, heartbeat, no human in the loop | Cron | `cronjob` tool |
 | Linear implementation, UI, browser proof, costly failure | Coding CLI | `cli-agent-first` |
 | Several coding agents already overlap | Coding CLI | `concurrent-coding-agent-coordination` plus `cli-agent-first` |
 | Native subagent implementation loop | Subagents | `subagent-driven-development` only when that loop is already the project convention |
 
-`delegate_task` is a tool, not a lane. It belongs to the Subagents lane and to short reasoning inside an already chosen lane. It is not a substitute for Kanban or Coding CLI.
+`delegate_task` is a tool, not a lane. It belongs to the Subagents lane and to short reasoning inside an already chosen lane. It is not a substitute for Kanban, Cron, or Coding CLI.
 
 ## Plan and architecture
 
@@ -35,8 +38,8 @@ Map a request to installed frontmatter names. If two skills appear in one row, t
 | Sharpen a plan with no repo | `grill-me` |
 | Interview primitive with no wrapper | `grill-me` already covers this. Do not invent `/grilling` unless that skill is installed |
 | Huge foggy effort, decisions not deliverables | Human types `/wayfinder`, then `to-spec` |
-| Agreed design needs a spec | `to-spec` |
-| Spec needs vertical tickets | `to-tickets` |
+| Design is agreed, spec does not exist | `to-spec` |
+| Spec exists, tickets do not | `to-tickets` |
 | Markdown plan, no execution | `plan` |
 | Missing facts live in someone else's head | Human types `/to-questionnaire` |
 | Stateful language, overloaded terms, ADRs | `principle-model-the-domain`, `domain-modeling` |
@@ -45,6 +48,8 @@ Map a request to installed frontmatter names. If two skills appear in one row, t
 | TypeScript package boundaries | `typescript-best-practices` |
 | Throwaway design question | `prototype` |
 | Throwaway technical experiment | `spike` |
+
+Default sequence for new behaviour: `/grill-with-docs` or `grill-me` → agreed design → `to-spec` → `to-tickets`. Do not skip to `implement`.
 
 ## Build
 
@@ -122,7 +127,7 @@ Do not run `code-review` and `github-code-review` on the same artifact unless on
 | --- | --- |
 | Docker, images, Compose | `docker-management` |
 | Mac or remote host over SSH | `remote-machine-access` |
-| Hermes setup, config, Desktop | `hermes-agent` |
+| Hermes setup, config, docs order | `hermes-agent` |
 | Desktop in the background | `computer-use` |
 | Temporary public Worker | `cloudflare-temporary-deploy` |
 | Static site that must store form posts | `durable-static-site-forms` |
@@ -144,3 +149,10 @@ Do not run `code-review` and `github-code-review` on the same artifact unless on
 ## Installed writers
 
 This distribution materializes `codex`, `claude-code`, and `opencode`. `cli-agent-first` may mention other writers. Use a writer only after checking that it is installed and authorized. A missing CLI is a named gap, not a pretended run.
+
+Default writer pick when `cli-agent-first` is loaded:
+
+- Linear UI, browser proof, editor context: `cursor-agent` if installed, otherwise `claude-code` or `opencode`.
+- Security, money, irreversible, costly failure: `codex`.
+- Grok Build: `grok` only if installed. If that CLI returns a quota exhaustion, send linear work to Cursor and high-cost work to Codex.
+- A writer the current user named: that writer, if installed.

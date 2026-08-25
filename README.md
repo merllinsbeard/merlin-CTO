@@ -4,7 +4,7 @@ Merlin CTO is an opinionated Hermes engineering profile that routes architecture
 
 Stock Hermes plus a skill folder still improvises the whole job in one chat and treats a patch as done. This profile decides how the work runs, who may write, and what counts as finished.
 
-Current distribution: **1.0.1**, 96 materialized skills, Hermes **0.20.5** or newer. Install follows the repository default branch. Compare a checkout to the [latest GitHub Release](https://github.com/merllinsbeard/merlin-CTO/releases/latest) before you trust it.
+Current distribution: **1.0.1**, 97 materialized skills, Hermes **0.20.5** or newer. Install follows the repository default branch. Compare a checkout to the [latest GitHub Release](https://github.com/merllinsbeard/merlin-CTO/releases/latest) before you trust it.
 
 ## What you use it for
 
@@ -45,6 +45,8 @@ A real run from this repository, 2026-08-25.
 That is the bar. A route that ends in "should work" is unfinished.
 
 ## How a request moves
+
+Type `/ask-cto`. The skill names the lane, the owner, the supporting skills, and the proof. Then the named route runs.
 
 ```mermaid
 flowchart LR
@@ -172,7 +174,7 @@ The first four commits on `main` are not GPG or SSH signed. No signing key is co
 
 ### Skill provenance
 
-96 `SKILL.md` files, materialized with no symlinks.
+97 `SKILL.md` files, materialized with no symlinks.
 
 | Family | Count | Upstream |
 | --- | --- | --- |
@@ -180,7 +182,7 @@ The first four commits on `main` are not GPG or SSH signed. No signing key is co
 | `principle-*` | 11 | [pstack](https://github.com/cursor/plugins/tree/main/pstack), MIT |
 | Visualization | 11 | Taste Skill, Baoyu, and distribution-authored adapters |
 | GitHub, Hermes, and writer CLIs | 15 | Hermes Agent plus Codex, Claude Code, OpenCode adapters |
-| Spec, review, debug, and campaign skills | 38 | This distribution and adapted Hermes engineering skills |
+| Spec, review, debug, and campaign skills | 39 | This distribution and adapted Hermes engineering skills |
 
 Third-party text keeps its own license. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
