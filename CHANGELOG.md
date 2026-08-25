@@ -3,6 +3,7 @@
 ## Unreleased
 
 - Add `/ask-merlin` as the profile router: all merlin-cto skills, SOUL wording, model-invoked only when the user asks which skill or flow
+- Add ten live-needed skills: profile/Desktop/Kanban/OAuth, `setup-ts-deep-modules`, `codebase-capability-map`
 
 ## 1.0.1 - 2026-08-25
 

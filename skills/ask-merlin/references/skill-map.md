@@ -69,7 +69,9 @@ Load only after `cli-agent-first` named this sibling. Check the binary and login
 - `prototype`. Одноразовая программа, которая отвечает на вопрос дизайна.
 - `spike`. Одноразовый технический эксперимент до сборки. В продукт не мержи.
 - `codebase-inspection`. LOC, языки, соотношения. Инвентарь, не вики.
+- `codebase-capability-map`. Карта возможностей платформы из исходников и доков: что система умеет на самом деле.
 - `software-architecture-visualization`. Картинка архитектуры только из фактов репо.
+- `setup-ts-deep-modules`. TypeScript-пакеты как глубокие модули через dependency-cruiser.
 
 ## Correctness
 
@@ -93,6 +95,7 @@ Load only after `cli-agent-first` named this sibling. Check the binary and login
 - `requesting-code-review`. Локальный проход до коммита: сканы, гейты, автофикс.
 - `github-code-review`. PR на GitHub, inline через `gh` или REST.
 - `sdlc-review`. Ревью handoff в полосе Kanban. Не подменяет исполнителя.
+- `kanban-board-operations`. Почистить или сверить переполненную Kanban-доску. Это состояние доски, не код-ревью.
 - `oracle`. Второй модели дай бандл промпта и файлов. Совет, не факт.
 - `production-release-verification`. merged, released, deployed, live-accepted держи раздельно. Health-check не закрывает пользовательский сценарий.
 
@@ -133,6 +136,13 @@ Load only after `cli-agent-first` named this sibling. Check the binary and login
 - `docker-management`. Контейнеры, образы, тома, Compose.
 - `remote-machine-access`. Нативная работа с Mac и удалёнными хостами.
 - `hermes-agent`. Настройка и диагностика Hermes. Официальная документация остаётся главным источником.
+- `hermes-desktop-debugging`. Desktop ведёт UI-действие не туда. Трассируй как переход состояния, не как один обработчик кнопки.
+- `inspecting-hermes-desktop-dom`. Прочитать живой DOM/CSS Desktop через CDP.
+- `hermes-profile-skills`. Подключить навыки в изолированный профиль.
+- `hermes-profile-governance`. Аудит и сопровождение поведения профиля целиком.
+- `public-hermes-profile-distribution`. Опубликовать переносимый профиль с доказательствами.
+- `hermes-agent-skill-authoring`. Писать in-repo SKILL.md: frontmatter и структура.
+- `oauth-login-debug`. Живой провал OAuth/OIDC. Сначала пробы против сайта, не догадки по докам.
 - `wizard`. Шаги, которые может кликнуть только человек.
 - `cloudflare-temporary-deploy`. Временный живой Worker без аккаунта.
 - `durable-static-site-forms`. Статический сайт должен реально сохранить заявку.

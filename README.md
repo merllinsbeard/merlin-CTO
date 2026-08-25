@@ -4,7 +4,7 @@ Merlin CTO is an opinionated Hermes engineering profile that routes architecture
 
 Stock Hermes plus a skill folder still improvises the whole job in one chat and treats a patch as done. This profile decides how the work runs, who may write, and what counts as finished.
 
-Current distribution: **1.0.1**, 97 materialized skills, Hermes **0.20.5** or newer. Install follows the repository default branch. Compare a checkout to the [latest GitHub Release](https://github.com/merllinsbeard/merlin-CTO/releases/latest) before you trust it.
+Current distribution: **1.0.1**, 107 materialized skills, Hermes **0.20.5** or newer. Install follows the repository default branch. Compare a checkout to the [latest GitHub Release](https://github.com/merllinsbeard/merlin-CTO/releases/latest) before you trust it.
 
 ## What you use it for
 
@@ -172,15 +172,15 @@ The first four commits on `main` are not GPG or SSH signed. No signing key is co
 
 ### Skill provenance
 
-97 `SKILL.md` files, materialized with no symlinks.
+107 `SKILL.md` files, materialized with no symlinks.
 
 | Family | Count | Upstream |
 | --- | --- | --- |
-| `mattpocock/` | 21 | [mattpocock/skills](https://github.com/mattpocock/skills), MIT |
+| `mattpocock/` | 22 | [mattpocock/skills](https://github.com/mattpocock/skills), MIT |
 | `principle-*` | 11 | [pstack](https://github.com/cursor/plugins/tree/main/pstack), MIT |
 | Visualization | 11 | Taste Skill, Baoyu, and distribution-authored adapters |
-| GitHub, Hermes, and writer CLIs | 15 | Hermes Agent plus Codex, Claude Code, OpenCode adapters |
-| Spec, review, debug, and campaign skills | 39 | This distribution and adapted Hermes engineering skills |
+| GitHub, Hermes, and writer CLIs | 22 | Hermes Agent plus Codex, Claude Code, OpenCode adapters |
+| Spec, review, debug, and campaign skills | 41 | This distribution and adapted Hermes engineering skills |
 
 Third-party text keeps its own license. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
