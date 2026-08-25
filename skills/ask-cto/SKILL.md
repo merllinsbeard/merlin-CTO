@@ -1,8 +1,7 @@
 ---
 name: ask-cto
-description: Ask which skill or flow fits this request.
-disable-model-invocation: true
-version: 1.3.0
+description: "Use only when the user asks which skill or flow."
+version: 1.4.0
 author: Merlin, Hermes Agent
 license: MIT
 platforms: [linux, macos, windows]
@@ -16,11 +15,11 @@ metadata:
 
 You don't remember every skill, so ask.
 
+Load this skill only when the human explicitly asks which skill, flow, or mode to use. If they already named a skill, or they asked you to do the work, do not load this file.
+
 A **flow** is a path through the skills in this profile. Most work travels one **main flow**. **Modes** from `SOUL.md` decide who writes. Everything else is an on-ramp or standalone.
 
 `SOUL.md` is the source of truth for modes, ownership, and the skill lists. This file names the path. It does not add a fifth mode.
-
-If the human already named a skill, load that skill.
 
 `ask-matt` covers the Matt Pocock family only.
 
@@ -47,7 +46,7 @@ The route most work travels.
    - **Yes.** Load `to-spec`, then `to-tickets`. Each ticket is a vertical slice with `blocked_by` edges. Then run one ticket at a time through `implement` or `implement-spec`. Fresh context per ticket.
    - **No.** Load `implement` or `implement-spec` in this window.
 
-   Either way, load `blast-radius` before a non-trivial edit. Close with `principle-prove-it-works`. Written code is not done. Done: every acceptance criterion has a test, live output, diff, file, URL, or service state.
+   Either way, load `blast-radius` before a non-trivial edit. Prefer `ponytail` and `principle-laziness-protocol` for the smallest native change. Split large work with `principle-sequence-verifiable-units`. If the run keeps stopping short, load `unlazy`. Close with `principle-prove-it-works`. Written code is not done. Done: every acceptance criterion has a test, live output, diff, file, URL, or service state.
 
 Keep steps 1-3 (grill, spec, tickets) in one window. Do not implement inside the spec step.
 
@@ -71,8 +70,46 @@ A starting situation that generates work, then merges onto the main flow.
 
 - `principle-model-the-domain` and `domain-modeling`: stateful language, overloaded words, branching rules.
 - `codebase-design`: deep module, seam, interface.
+- `principle-type-system-discipline`, `principle-boundary-discipline`, `principle-separate-before-serializing-shared-state`: illegal states, validation edges, shared writers.
+- `setup-ts-deep-modules`: TypeScript package boundaries.
+- `codebase-capability-map`: what the platform can actually do. Skip if it is not installed.
 
-Reach for these when the words are the problem. Let the flow above pull them in otherwise.
+Reach for these when the words or the seams are the problem. Let the flow above pull them in otherwise.
+
+## Review and release
+
+Pick one review skill for one artifact.
+
+- Local diff against spec or standards: `code-review`.
+- Pre-commit pass: `requesting-code-review`.
+- GitHub pull request: `github-code-review`.
+- Kanban review lane: `sdlc-review`.
+- Costly or failed work: add `oracle`.
+- Merged vs released vs deployed vs live-accepted: `production-release-verification`. Green CI is not live-accepted.
+
+## GitHub
+
+- Auth or `gh` login: `github-auth`.
+- Create or triage issues: `github-issues`.
+- Issue to a verified PR: `github-issue-to-pr`.
+- Branch, commit, open, CI, merge: `github-pr-workflow`.
+- Clone, remotes, releases: `github-repo-management`.
+- Several coding agents already overlap: `concurrent-coding-agent-coordination`.
+
+## Frontend and product
+
+- New UI: `design-taste-frontend`, then a writer through `cli-agent-first`.
+- Existing UI: `redesign-existing-projects`.
+- Quality gaps: `frontend-premium-audit`.
+- Live exploratory QA: `dogfood`. File defects, then return to the main flow.
+- Promise versus live copy: `product-surface-review`.
+
+## Writers and infra
+
+`cli-agent-first` names the writer. This distribution ships `codex`, `claude-code`, and `opencode`. Use `cursor-agent` or `grok` only if installed. A missing CLI is a named gap.
+
+- Containers: `docker-management`.
+- Recurring lesson: `principle-encode-lessons-in-structure`. Put it in code, types, tests, or a skill.
 
 ## Phase boundaries
 
