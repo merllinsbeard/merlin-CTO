@@ -2,8 +2,7 @@
 
 ## Unreleased
 
-- Add `/ask-cto` as a SOUL explainer: which mode and which listed skills fit the request
-- Expand `SOUL.md` with when-to-pick notes for modes and skill groups
+- Add `/ask-cto` as a user-invoked router in the ask-matt shape: modes from SOUL, main flow idea → ship, Hermes phase boundaries
 
 ## 1.0.1 - 2026-08-25
 
