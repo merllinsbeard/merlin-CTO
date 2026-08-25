@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.0.1 - 2026-08-25
+
+Patch on the first public drop.
+
+- Run gitleaks from `$RUNNER_TEMP` so the binary never lands in the checkout
+- Ignore a local `gitleaks` binary
+- Manifest version `1.0.1` so `hermes profile info` matches the green tag
+
+The 1.0.0 GitHub Release remains as history. Its Actions run failed on the receipt step for this reason.
+
 ## 1.0.0 - 2026-08-25
 
 First public Merlin CTO distribution.

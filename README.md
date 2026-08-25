@@ -4,7 +4,7 @@ Merlin CTO is an opinionated Hermes engineering profile that routes architecture
 
 Stock Hermes plus a skill folder still improvises the whole job in one chat and treats a patch as done. This profile decides how the work runs, who may write, and what counts as finished.
 
-Current distribution: **1.0.0**, 96 materialized skills, Hermes **0.20.5** or newer. Install follows the repository default branch. Compare a checkout to the [latest GitHub Release](https://github.com/merllinsbeard/merlin-CTO/releases/latest) before you trust it.
+Current distribution: **1.0.1**, 96 materialized skills, Hermes **0.20.5** or newer. Install follows the repository default branch. Compare a checkout to the [latest GitHub Release](https://github.com/merllinsbeard/merlin-CTO/releases/latest) before you trust it.
 
 ## What you use it for
 
@@ -159,12 +159,13 @@ User-owned memory, sessions, credentials, logs, and local workspace data stay un
 
 | Version | Date | What landed |
 | --- | --- | --- |
-| [1.0.0](https://github.com/merllinsbeard/merlin-CTO/releases/tag/v1.0.0) | 2026-08-25 | First public distribution. 96 skills. Fail-closed verifiers. Isolated install smoke. This positioning, CI, changelog, and release receipts |
+| [1.0.1](https://github.com/merllinsbeard/merlin-CTO/releases/tag/v1.0.1) | 2026-08-25 | CI receipt step no longer drops the gitleaks binary into the checkout |
+| [1.0.0](https://github.com/merllinsbeard/merlin-CTO/releases/tag/v1.0.0) | 2026-08-25 | First public distribution. 96 skills. Fail-closed verifiers. Isolated install smoke. Positioning README, changelog, and release receipts |
 
 Full notes live in [CHANGELOG.md](CHANGELOG.md). Each GitHub Release attaches a receipt with commit SHA, tree SHA, skill count, and verifier results.
 
 ```bash
-python scripts/write_release_receipt.py --check /path/to/merlin-cto-1.0.0.receipt.json
+python scripts/write_release_receipt.py --check /path/to/merlin-cto-1.0.1.receipt.json
 ```
 
 The first four commits on `main` are not GPG or SSH signed. No signing key is configured for this publisher on the build host. Do not rewrite that history. Trust the receipt, the CI run on that SHA, and the GitHub Release asset.
