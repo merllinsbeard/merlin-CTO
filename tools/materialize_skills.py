@@ -12,6 +12,17 @@ IGNORED_NAMES = (".git", "__pycache__", "*.pyc", ".DS_Store", "*.bak", "*.bak-*"
 TEXT_SUFFIXES = {".md", ".py", ".sh", ".json", ".yaml", ".yml", ".toml", ".txt"}
 
 SKILLS = [
+    "ask-merlin",
+    "setup-ts-deep-modules",
+    "codebase-capability-map",
+    "hermes-profile-skills",
+    "hermes-profile-governance",
+    "public-hermes-profile-distribution",
+    "hermes-agent-skill-authoring",
+    "hermes-desktop-debugging",
+    "inspecting-hermes-desktop-dom",
+    "kanban-board-operations",
+    "oauth-login-debug",
     "blast-radius",
     "concise",
     "how",

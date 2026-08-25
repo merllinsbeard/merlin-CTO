@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <img src="docs/media/meta.svg" width="100%" alt="1.0.2. 96 skills. Hermes 0.20.5 or newer. MIT. Install follows main.">
+  <img src="docs/media/meta.svg" width="100%" alt="1.0.3. 107 skills. Hermes 0.20.5 or newer. MIT. Install follows main.">
 </p>
 
 An opinionated Hermes engineering profile. It routes architecture, implementation, review, release, and infrastructure work to the right execution mode, keeps one writer per worktree, and finishes with verification evidence.
@@ -55,7 +55,7 @@ Credentials stay on the installing machine. They are never in this repository.
 
 **Design.** Lock the rule before the patch. `to-spec`, `domain-modeling`, `codebase-design`.
 
-**Implement.** `cli-agent-first` picks direct, subagent, Kanban, or a coding CLI. One writer per worktree.
+**Implement.** `cli-agent-first` picks direct, subagent, Kanban, or a coding CLI. One writer per worktree. Ask which skill or flow: `/ask-merlin`.
 
 **Review.** Judge the live diff, not the story. `blast-radius`, `github-code-review`.
 
@@ -138,6 +138,7 @@ User-owned memory, sessions, credentials, and workspace data stay untouched.
 
 | Version | Date | What landed |
 | --- | --- | --- |
+| [1.0.3](https://github.com/merllinsbeard/merlin-CTO/releases/tag/v1.0.3) | 2026-08-25 | `/ask-merlin` router and 107 skills |
 | [1.0.2](https://github.com/merllinsbeard/merlin-CTO/releases/tag/v1.0.2) | 2026-08-25 | Positioning plates and a 24s reel |
 | [1.0.1](https://github.com/merllinsbeard/merlin-CTO/releases/tag/v1.0.1) | 2026-08-25 | CI receipt no longer drops gitleaks into the checkout |
 | [1.0.0](https://github.com/merllinsbeard/merlin-CTO/releases/tag/v1.0.0) | 2026-08-25 | First public distribution |
@@ -145,20 +146,20 @@ User-owned memory, sessions, credentials, and workspace data stay untouched.
 Full notes: [CHANGELOG.md](CHANGELOG.md).
 
 ```bash
-python scripts/write_release_receipt.py --check /path/to/merlin-cto-1.0.2.receipt.json
+python scripts/write_release_receipt.py --check /path/to/merlin-cto-1.0.3.receipt.json
 ```
 
 Published commits are not GPG or SSH signed. No signing key is configured on the build host. Trust the receipt, the CI run on that SHA, and the GitHub Release asset.
 
-96 `SKILL.md` files, materialized with no symlinks.
+107 `SKILL.md` files, materialized with no symlinks.
 
 | Family | Count | Upstream |
 | --- | --- | --- |
-| `mattpocock/` | 21 | [mattpocock/skills](https://github.com/mattpocock/skills), MIT |
+| `mattpocock/` | 22 | [mattpocock/skills](https://github.com/mattpocock/skills), MIT |
 | `principle-*` | 11 | [pstack](https://github.com/cursor/plugins/tree/main/pstack), MIT |
 | Visualization | 11 | Taste Skill, Baoyu, and distribution-authored adapters |
-| GitHub, Hermes, and writer CLIs | 15 | Hermes Agent plus Codex, Claude Code, OpenCode adapters |
-| Spec, review, debug, and campaign skills | 38 | This distribution and adapted Hermes engineering skills |
+| GitHub, Hermes, and writer CLIs | 22 | Hermes Agent plus Codex, Claude Code, OpenCode adapters |
+| Spec, review, debug, and campaign skills | 41 | This distribution and adapted Hermes engineering skills |
 
 Third-party text keeps its own license. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 

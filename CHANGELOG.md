@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.0.3 - 2026-08-25
+
+Ask-merlin router and the live-needed skill pack land on the night README.
+
+- `/ask-merlin` routes the whole merlin-cto skill tree when the user asks which skill or flow
+- Ten live-needed skills: profile, Desktop, Kanban, OAuth, `setup-ts-deep-modules`, `codebase-capability-map`
+- Installed pack is now 107 materialized skills
+- Public plates and the quiet reel from 1.0.2 stay first on the homepage
+
 ## 1.0.2 - 2026-08-25
 
 Public plates and a short reel.
@@ -8,7 +17,7 @@ Public plates and a short reel.
 - `docs/media/reel.mp4`: same plates, stations fill, sun breathes
 - README uses the plates instead of Mermaid
 
-The installed profile payload is unchanged: still 96 skills, local memory, no credentials.
+The installed profile payload was still 96 skills.
 
 ## 1.0.1 - 2026-08-25
 
