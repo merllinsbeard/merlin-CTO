@@ -27,7 +27,15 @@ assert manifest["version"] == "1.0.0"
 assert manifest["name"].startswith("merlin-cto-smoke-")
 assert sum(1 for _ in (root / "skills").rglob("SKILL.md")) == 96
 assert not any(path.is_symlink() for path in root.rglob("*"))
-for maintainer_only in ("GATES.md", "README.md", "scripts", "tools", "third_party"):
+for maintainer_only in (
+    "CHANGELOG.md",
+    "GATES.md",
+    "README.md",
+    ".github",
+    "scripts",
+    "tools",
+    "third_party",
+):
     assert not (root / maintainer_only).exists(), maintainer_only
 PY
 

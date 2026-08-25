@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import subprocess
 import sys
 from pathlib import Path
 
@@ -39,13 +40,27 @@ def fail(message: str) -> None:
     raise SystemExit(f"public tree verification: FAIL: {message}")
 
 
+def git_visible_files(root: Path) -> list[Path]:
+    try:
+        output = subprocess.check_output(
+            ["git", "ls-files", "-z", "-c", "-o", "--exclude-standard"],
+            cwd=root,
+        )
+    except (subprocess.CalledProcessError, FileNotFoundError):
+        return [
+            path
+            for path in root.rglob("*")
+            if path.is_file() and path.parts[len(root.parts) : len(root.parts) + 1] != (".git",)
+        ]
+    names = [name.decode() for name in output.split(b"\0") if name]
+    return [root / name for name in names]
+
+
 def main() -> int:
     root = Path(sys.argv[1] if len(sys.argv) > 1 else ".").resolve()
     files = []
-    for path in root.rglob("*"):
+    for path in git_visible_files(root):
         relative = path.relative_to(root)
-        if relative.parts[:1] == (".git",):
-            continue
         if path.is_symlink():
             fail(f"symlink found: {relative}")
         if ".bak" in path.name.lower():
